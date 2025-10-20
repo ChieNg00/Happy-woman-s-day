@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chúc mừng Ngày Phụ Nữ Việt Nam 20/10</title>
+  <style>
+    :root{
+      --bg1:#10233d;
+      --bg2:#1a355a;
+      --accent:#ff6b9a;
+      --gold:#ffd166;
+      --soft:#f8fafc;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      font-family:'Poppins','Inter','Segoe UI',sans-serif;color:var(--soft);
+      overflow:hidden;position:relative;
+      animation:bg-shift 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes bg-shift {
+      0%{background:linear-gradient(135deg,#0f1724,#16233b);}
+      50%{background:linear-gradient(135deg,#1d345a,#2b4d77);}
+      100%{background:linear-gradient(135deg,#182a4a,#0f1724);}
+    }
+
+    .bubble{position:absolute;width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.15);animation:float 12s infinite ease-in-out;}
+    .bubble:nth-child(1){left:10%;animation-delay:0s;width:8px;height:8px;}
+    .bubble:nth-child(2){left:30%;animation-delay:3s;width:12px;height:12px;}
+    .bubble:nth-child(3){left:50%;animation-delay:6s;width:16px;height:16px;}
+    .bubble:nth-child(4){left:70%;animation-delay:2s;width:10px;height:10px;}
+    .bubble:nth-child(5){left:90%;animation-delay:5s;width:14px;height:14px;}
+
+    @keyframes float{
+      0%{bottom:-10%;opacity:0;transform:translateX(0)}
+      30%{opacity:0.5}
+      50%{opacity:1;transform:translateX(10px)}
+      70%{opacity:0.5;transform:translateX(-10px)}
+      100%{bottom:110%;opacity:0;}
+    }
+
+    .stage{
+      width:min(900px,94vw);background:rgba(255,255,255,0.05);border-radius:20px;padding:36px;box-shadow:0 18px 40px rgba(0,0,0,0.5);
+      display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;
+      border:1px solid rgba(255,255,255,0.05);
+      backdrop-filter:blur(10px);
+      z-index:2;
+      animation:fade-in 1.5s ease;
+    }
+    @keyframes fade-in{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+    @media (max-width:820px){.stage{grid-template-columns:1fr;}}
+
+    .message h1{
+      font-size:clamp(28px,4vw,42px);margin:0 0 12px;color:var(--accent);text-shadow:0 0 25px rgba(255,107,154,0.2);
+      animation:glow 3s ease-in-out infinite alternate;
+    }
+    @keyframes glow{from{text-shadow:0 0 10px rgba(255,107,154,0.4);}to{text-shadow:0 0 25px rgba(255,107,154,0.8);}}
+
+    .highlight{
+      display:inline-block;padding:4px 10px;background:var(--accent);color:#fff;border-radius:12px;font-weight:600;font-size:18px;margin-left:10px;
+      box-shadow:0 0 10px rgba(255,107,154,0.6);
+    }
+    .message .lead{font-size:18px;opacity:0.9;margin-bottom:12px;}
+    .typewriter{font-weight:600;font-size:20px;letter-spacing:0.4px;min-height:28px;}
+
+    .flower-wrap{display:flex;align-items:center;justify-content:center;height:460px;position:relative;}
+    svg{width:300px;height:300px;overflow:visible;}
+    .petal{transform-origin:50% 50%;opacity:0;}
+    .center{transform-origin:50% 50%;opacity:0;}
+
+    @keyframes petal-grow{0%{transform:scale(0.2);opacity:0;}60%{transform:scale(1.05);opacity:1;}100%{transform:scale(1);opacity:1;}}
+    @keyframes center-pop{0%{transform:scale(0);opacity:0;}70%{transform:scale(1.1);opacity:1;}100%{transform:scale(1);opacity:1;}}
+
+    .petal.p1{animation:petal-grow 1.0s ease forwards;animation-delay:0.1s}
+    .petal.p2{animation:petal-grow 1.0s ease forwards;animation-delay:0.2s}
+    .petal.p3{animation:petal-grow 1.0s ease forwards;animation-delay:0.3s}
+    .petal.p4{animation:petal-grow 1.0s ease forwards;animation-delay:0.4s}
+    .petal.p5{animation:petal-grow 1.0s ease forwards;animation-delay:0.5s}
+    .petal.p6{animation:petal-grow 1.0s ease forwards;animation-delay:0.6s}
+    .petal.p7{animation:petal-grow 1.0s ease forwards;animation-delay:0.7s}
+    .petal.p8{animation:petal-grow 1.0s ease forwards;animation-delay:0.8s}
+    .center{animation:center-pop 0.9s ease forwards;animation-delay:0.9s}
+
+    .shooting-star {
+      position: absolute;
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), transparent);
+      top: -10%;
+      left: 50%;
+      animation: star-fall 6s linear infinite;
+    }
+
+    @keyframes star-fall {
+      0% { transform: translate(-50%, -50%) rotate(45deg); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translate(600px, 600px) rotate(45deg); opacity: 0; }
+    }
+
+    footer{position:absolute;bottom:10px;font-size:12px;color:rgba(255,255,255,0.6);text-align:center;width:100%;}
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <div class="shooting-star" style="animation-delay: 2s;"></div>
+  <div class="shooting-star" style="animation-delay: 5s;"></div>
+
+  <div class="stage">
+    <div class="message">
+      <h1>Chúc mừng Ngày Phụ Nữ Việt Nam <span class="highlight">20/10</span></h1>
+      <p class="lead">Hôm nay ta tôn vinh những người phụ nữ can đảm, dịu dàng, sáng tạo và bền bỉ. Cảm ơn vì đã làm cho thế giới đẹp hơn.</p>
+      <div class="typewriter" id="type"></div>
+    </div>
+
+    <div class="flower-wrap">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <g transform="translate(100,100)">
+          <g class="petal p1" transform="rotate(0)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff6b9a"/>
+          </g>
+          <g class="petal p2" transform="rotate(45)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff8fb0"/>
+          </g>
+          <g class="petal p3" transform="rotate(90)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ffb6d1"/>
+          </g>
+          <g class="petal p4" transform="rotate(135)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff6b9a"/>
+          </g>
+          <g class="petal p5" transform="rotate(180)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff7aa3"/>
+          </g>
+          <g class="petal p6" transform="rotate(225)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff9cbc"/>
+          </g>
+          <g class="petal p7" transform="rotate(270)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff4f83"/>
+          </g>
+          <g class="petal p8" transform="rotate(315)">
+            <path d="M0 -10 C 28 -40 60 -55 70 -40 C 80 -18 50 10 30 28 C 10 46 -18 30 -30 24 C -42 18 -70 2 -70 -12 C -70 -28 -40 -20 -10 -8 Z" fill="#ff7aa3"/>
+          </g>
+
+          <g class="center">
+            <circle r="20" fill="#ffd166" stroke="#ffb74d" stroke-width="2" />
+            <circle r="8" fill="#fff" opacity="0.08" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <footer>Phiên bản đặc biệt — Gửi tặng những người phụ nữ tuyệt vời nhân ngày 20/10 💖</footer>
+
+  <script>
+    const texts = [
+      "Happy Women's Day!",
+      "Chúc mừng Ngày Phụ Nữ Việt Nam!",
+      "20/10 — Ngày tôn vinh phái đẹp."
+    ];
+    const el = document.getElementById('type');
+    let idx = 0;
+
+    function typeText(t, cb){
+      el.textContent='';
+      let i = 0;
+      const speed = 40;
+      const timer = setInterval(()=>{
+        el.textContent += t.charAt(i);
+        i++;
+        if(i>=t.length){clearInterval(timer); if(cb) setTimeout(cb,700)}
+      }, speed);
+    }
+
+    function playSequence(){
+      idx = 0;
+      function next(){
+        if(idx >= texts.length) return;
+        typeText(texts[idx], ()=>{ idx++; setTimeout(next, 800)});
+      }
+      setTimeout(next, 700);
+    }
+
+    window.addEventListener('load', playSequence);
+  </script>
+</body>
+</html>
